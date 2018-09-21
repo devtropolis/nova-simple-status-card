@@ -1,4 +1,4 @@
-# Nova Package Discovery package
+# Simple Status Card
 
 A really simple status card for laravel nova. Configure an endpoint to return a status and a message and you are good to go
 
@@ -11,7 +11,7 @@ A really simple status card for laravel nova. Configure an endpoint to return a 
  You can install the card via Composer using the following command
  
  
-    composer require devtropolis/statuscard    
+    composer require devtropolis/nova-simple-status-card    
  
  
 The card needs a url to be passed to it, included in the card package is a test url, you can specify any url you would like
@@ -22,7 +22,7 @@ you then need to register the card in the cards array
     public function cards()
     {
         return [
-            new Statuscard->options(['/nova-vendor/statuscard/statusTestEndpoint']),
+            new NovaSimpleStatusCard->options(['/nova-vendor/statuscard/statusTestEndpoint']),
         ];
     }
 
@@ -41,7 +41,7 @@ You can customise the following:
  
  to set the options just pass them as a array elements to the options method of the card
      
-      (new Statuscard())->options(['title' => 'My Custom Title',
+      (new NovaSimpleStatusCard())->options(['title' => 'My Custom Title',
                                              'url' => '/nova-vendor/statuscard/statusTestEndpoint',
                                              'icon' => 'https://avatars3.githubusercontent.com/u/2988541?s=200&v=4'
                                              'fetchInterval' => 5000 
