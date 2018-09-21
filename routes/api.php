@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/statusTestEndpoint', function (Request $request) {
 
-    $arrStatus=array('pass','fail');
+    $arrStatus=array('pass','fail','other','unknown');
 
     return response([
         'status'=> $arrStatus[array_rand($arrStatus)],
